@@ -1,3 +1,4 @@
 export default function buildHome() {
-    content.innerHTML = 'Home';
+    const main = document.getElementById('main');
+    main.innerHTML = 'Home';
 };

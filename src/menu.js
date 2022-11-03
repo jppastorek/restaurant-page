@@ -39,6 +39,6 @@ export default function buildMenu() {
     menu.forEach((item) => {
         let div = document.createElement('div');
         div.innerHTML = `${item.name}, ${item.price}, ${item.description}`
-        content.appendChild(div);
+        main.appendChild(div);
     });
 }

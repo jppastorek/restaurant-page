@@ -23,7 +23,9 @@ body {
 #header {
     height: 150px;
     width: 100vw;
-    background-color: var(--header-bgcolor);
+    /* background-color: var(--header-bgcolor); */
+    background: rgb(0, 146, 70);
+    background: linear-gradient(90deg, rgba(0, 146, 70, 1) 0%, rgba(255, 255, 255, 1) 50%, rgba(206, 43, 55, 1) 100%);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -49,6 +51,7 @@ body {
     padding: 20px;
     margin: 0;
     background-color: var(--nav-bgcolor);
+    overflow: visible;
 }
 
 .nav-link>button {
