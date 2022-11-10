@@ -11,3 +11,4 @@ main.setAttribute('id', 'main');
 // content.appendChild(buildHeader());
 buildHeader();
 content.appendChild(main);
+buildHome();
