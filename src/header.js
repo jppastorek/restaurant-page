@@ -8,7 +8,7 @@ export default function buildHeader() {
     content.appendChild(header);
     const headerText = document.createElement('div');
     headerText.setAttribute('class', 'header-text')
-    headerText.innerText = `Chloe's Classic Cuisine`;
+    headerText.innerText = `chloe`;
     header.appendChild(headerText);
 
     //NAV
@@ -21,19 +21,19 @@ export default function buildHeader() {
 
     //NAV LINKS
     const navLinkHome = document.createElement('button');
-    navLinkHome.innerText = 'Home';
+    navLinkHome.innerText = 'home';
     navLinkHome.addEventListener('click', () => {
         main.innerHTML = '';
         buildHome();
     });
     const navLinkMenu = document.createElement('button');
-    navLinkMenu.innerHTML = 'Menu';
+    navLinkMenu.innerHTML = 'menu';
     navLinkMenu.addEventListener('click', () => {
         main.innerHTML = '';
         buildMenu();
     });
     const navLinkContact = document.createElement('button');
-    navLinkContact.innerHTML = 'Contact';
+    navLinkContact.innerHTML = 'contact';
     navLinkContact.addEventListener('click', () => {
         main.innerHTML = '';
         buildContact();

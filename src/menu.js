@@ -17,33 +17,33 @@ import Shrimp from './images/shrimp.jpg';
 
 export default function buildMenu() {
     const pizza = {
-        name: "Cheese Pizza",
+        name: "pizza",
         image: Pizza,
-        price: "19.99",
-        description: "Delicious mix of three cheeses and our specialty rich house-made marinara."
+        price: "18",
+        description: "Delicious mix of three cheeses and our specialty house-made marinara."
     };
     const cheeseburger = {
-        name: "Cheeseburger",
+        name: "burger",
         image: CheeseBurger,
-        price: "12.99",
-        description: "Juicy half pound patty with melted colby jack cheese. Served with fries."
+        price: "12",
+        description: "Juicy half pound patty with melted colby jack cheese."
     };
     const shrimp = {
-        name: "Fried Shrimp Platter",
+        name: "shrimp",
         image: Shrimp,
-        price: "16.99",
-        description: "Jumbo shrimp deep fried with our house made batter. Served with fries and a house salad."
+        price: "16",
+        description: "Jumbo shrimp deep fried with our house made batter."
     };
     const salad = {
-        name: "Caesar Salad",
+        name: "salad",
         image: Salad,
-        price: "14.99",
-        description: "Fresh cut romaine lettuce with house made croutons and Caesar dressing. Sprinkled with freshly grated parmesan-romano cheese."
+        price: "14",
+        description: "Fresh cut romaine lettuce with house made croutons and dressing."
     };
     const gumbo = {
-        name: "Chicken Andouille Gumbo",
+        name: "gumbo",
         image: Gumbo,
-        price: "10.99",
+        price: "12",
         description: "Bowl of chicken and andouille gumbo made in house every day."
     };
     const menu = [
@@ -60,18 +60,25 @@ export default function buildMenu() {
         let menuItem = document.createElement('div');
         menuItem.classList.add('menu-item');
         menuContainer.appendChild(menuItem);
+        let nameContainer = document.createElement('div');
+        nameContainer.classList.add('name-container');
         let itemName = document.createElement('h3');
         itemName.innerText = `${item.name}`;
         let itemDescription = document.createElement('p');
         itemDescription.innerText = `${item.description}`;
-        let itemPrice = document.createElement('p');
-        itemPrice.innerText = `$${item.price}`;
+        itemDescription.classList.add('italic');
+        let itemPrice = document.createElement('h3');
+        itemPrice.innerText = `${item.price}`;
         let itemImage = document.createElement('img');
         itemImage.src = item.image;
         itemImage.alt = `${item.name} - image`;
-        menuItem.appendChild(itemImage);
-        menuItem.appendChild(itemName);
-        menuItem.appendChild(itemPrice);
+        let imageDiv = document.createElement('div');
+        imageDiv.classList.add('image-container');
+        imageDiv.appendChild(itemImage);
+        menuItem.appendChild(imageDiv);
+        menuItem.appendChild(nameContainer);
+        nameContainer.appendChild(itemName);
+        nameContainer.appendChild(itemPrice);
         menuItem.appendChild(itemDescription);
     });
 }
